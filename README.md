@@ -3,3 +3,4 @@ déééépot de Numérique Sciences Informatique (autrement dit NSI) <br>
 des trucs sur `html`, `css`, `javascript` ...
 
 1. on va commencer avec html
+2. Puis on parle de css
