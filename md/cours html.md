@@ -112,7 +112,9 @@ text
 
 
 
-
+Pour écrire du JS on utilise les balises `<script></script>` et :
+- on écrit directement le code dans le fichier HTML
+- on écrit le code dans un fichier .js
 
 Pour attraper un élément sur la page afin de le manipuler avec JS, on peut utiliser:
 -`querySelector()`
@@ -125,6 +127,20 @@ let elementHTML = document.getElementById(""); //avec un id
 ```
 
 La plupart des éléments HTML interactifs ont une propriété `value`.
+```js
+console.log(elementHTML.value);
+```
+JS est capable d'associer un évènement à un élément HTML:
 
+- click
+- change
+- input
+- mouseover ....
 
+On utilise la méthode `addEventListener()`
 
+```js
+elementHTML.addEventListener("event", function(){
+// faire qqchose
+});
+```
