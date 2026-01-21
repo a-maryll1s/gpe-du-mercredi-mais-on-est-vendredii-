@@ -1,14 +1,49 @@
 img {
     width: 400px;
+    border-style: solid;
+    border-radius: 50%;
+    border-color: rgb(48, 45, 42);
+    padding: 5px;
+    margin-left: 35%;
+    
 
 }
+
+h1{
+    border-bottom: solid;
+    width: 18%;
+
+}
+
         body{
          background-color: cornsilk;
         }
 
-    p{
-       background-color: rgb(104, 93, 79);
-        color: bisque;
-        }
+p{
+    background-color: rgb(104, 93, 79);
+    color: bisque;
+    width: 50%;
+}
 
-    
+
+.premier{
+    background-color: rgb(93, 71, 25);
+    width: 33%;
+    text-align: justify;
+
+}
+
+#deux{
+    background-color: rgb(169, 131, 82);
+    width: 25%;
+    text-align: justify;
+    font-size: 20px;
+    font-style: oblique;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+/*bcp bcp de sites utilisent des font externes*/
+
+div{
+    border: solid;
+
+}
