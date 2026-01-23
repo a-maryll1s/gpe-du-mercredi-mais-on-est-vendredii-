@@ -98,8 +98,20 @@ ctr + shift + i
 Il s'agit d'un langage de programmation comme Python mais initialement dédié au Web.
 
 C'est un langage prévu pour intérgir avec une page HTML : le document peut se représenter ainsi :
-
-Image du DOM (Document Objet Model)
+dom (document object model)
+window
+├── alert()
+└── document
+    ├── getElementById()
+    ├── querySelector()
+    │       ↓
+    │   élément HTML
+    │       ├── innerHTML
+    │       ├── style
+    │       │     ├── color
+    │       │     ├── backgroundColor
+    │       │     └── display
+    │       └── addEventListener()
 
 Le JS permet de rendre une page HTML plus dynamique notamment grâce aux formulaires `<form></form>`
 
