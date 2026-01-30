@@ -1,0 +1,3 @@
+echo "saallut"
+mkdir nouveauDossier
+echo "travail terminé"

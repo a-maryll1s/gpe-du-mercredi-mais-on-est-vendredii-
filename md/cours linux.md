@@ -62,12 +62,77 @@ Syntaxe générale:    `nom --option argument` ou `nom -option argument`
 |`mkdir`|créer un dossier *vide*|`$ mkdir monDossier`|
 |`nano`|éditer un fichier|`$ nano monfichier`|
 |`cat`|affiche le contenu des fichiers |`$ cat monfichier`|
-
-
-
+|`history`|affiche l'historique des commandes |`$ history`|
+|`tree`|affiche l'arborescence du dossier courant `./` |`$ tree`|
+|`pwd`|affiche le chemin absolu vers le dossier courant `./` |`$ pwd`|
+|`cd`|changer de dossier courant |`$ cd <chemin abs ou rel>`|
+|`cp`|copier une source vers une destination |`$ cp <source> <destination>`|
+|`rm`|supprimer des dossiers ou des fichiers |`$ rm -r <chemin>`|
+|`mv`|couper ou renommer des fichiers |`$ mv <source> <destination>`|
+|`echo`|affiche un txt sur la sortie standard (ecran) |`$ echo "i love u"`|
+|`chmod`|modifie les permissions des fichiers(dossiers) |`$ chmod 777 monFichier`|
 ---------------
 Pour éditer un fichier plusieurs commandes/éditeurs sont possibles :
 - `nano` (dans ce cours)
 - `vi`
 - `emacs`
+-----------------
+Dans la console, `./` est facultatif.
 
+-----------------
+On peut rappeler une commade à partir de son numéro (n) dans l'historique:
+
+```bash
+$ !n
+```
+---------------
+Le chemin absolu vers un fichier ou un dossier est le chemin depuis la racine (*root*) `/` : par
+exemple `/workspaces/GpeMercredi`.
+
+Un chemin relatif commence par `./` ou `../` : on part du dossier courant.
+
+La maison de l'utilisateur (`/home/utilisateur` ou `~`) est accessible avec la commande `cd` sans argument.
+
+---------------
+la commande `cp`peut copier et renommer.
+
+```bash
+$ cp cheminVersFichier cheminVersDossier/
+```
+```bash
+$ cp cheminVersFichier cheminVersDossier/NouveauNom
+```
+
+La commande `mv` se comporte de manière semblable.
+
+----------------
+La commande `rmdir` supprime des dossiers vide; on lui préfère souvent `rm -r` qui supprime les fichiers et les dossiers.
+
+--------------------
+Il est possible d'écrire des commandes dans un fichier portant l'extension `.sh` ; pour éxécuter ce fichier:
+
+```bash
+./MonFichier.sh
+```
+
+
+Par défaut, les fichiers sur Linux ne sont pas exécutables. Quand on crée un fichier (un dossier), il possède des **permissions** qui peuvent être différentes pour :
+- `user` c'est le propriétaire
+- `group` c'est le nombre d'un grp particulier
+- `other` le reste du monde
+
+
+Les permissions sur un fichier (un dossier) sont:
+- *read*: `r` valeur 4
+- *write*: `w` valeur 2
+- execute*: `x` valeur 1
+
+La commande `chmod non` permet de modifier les permissions; il existe une autre syntaxte avec les lettres `u,g,o` (user, group,other) et les symboles `+,-` pour ajt ou retirer des droits.
+
+
+```bash
+chmod 754 ./monFichier         #rwx pour user, rx pour grp, r pr other
+chmod u-x, g+rw, o+w ./monFichier   #retire x pour user, ajt rw pour grp, ajt w pour other
+```
+
+Le symbole `>` ou `>>` permet de*rediriger*la sortie d'une commande vers un fichier. Si ce fichier n'existe pas
